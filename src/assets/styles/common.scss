@@ -1,0 +1,119 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+  color: $color-base;
+
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  background-color: #f0efe9;
+}
+
+.d-flex {
+  display: flex;
+}
+@media screen and (min-width: 576px) {
+  .d-sm-flex {
+    display: flex;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+@for $i from 0 through 40 {
+  .mb-#{$i} {
+    margin-bottom: $i + px !important;
+  }
+
+  .mt-#{$i} {
+    margin-top: $i + px !important;
+  }
+
+  .ml-#{$i} {
+    margin-left: $i + px !important;
+  }
+
+  .mr-#{$i} {
+    margin-right: $i + px !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $i + px !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: $i + px !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: $i + px !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: $i + px !important;
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.page__wrap {
+  max-width: 1000px;
+
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px #cfd0d5;
+}
+
+.page__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--left {
+    flex: 0 0 100%;
+    border-bottom: 1px solid $border-color-gray;
+  }
+
+  &--right {
+    flex: 0 0 100%;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &-wrap {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 992px) {
+    &--left {
+      flex: 2 0 0;
+  
+      border-right: 1px solid $border-color-gray;
+      border-bottom: 0;
+    }
+  
+    &--right {
+      flex: 3 0 0;
+    }
+  }
+}
+
+.bulk-action__wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  padding: 12px 20px; 
+  background-color: #f0efe9;
+}
