@@ -18,7 +18,12 @@ function App() {
 
   const localTodos = () => {
     const localTodos = localStorage.getItem("todos");
-    return JSON.parse(localTodos);
+
+    if (localTodos) {
+      return JSON.parse(localTodos);
+    }
+
+    return []
   };
 
   const handleAddTask = (payload) => {
